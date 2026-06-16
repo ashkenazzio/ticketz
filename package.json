@@ -1,0 +1,38 @@
+{
+  "name": "ticketz",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "dev:db": "docker compose -f infra/docker-compose.yml up -d",
+    "dev:db:down": "docker compose -f infra/docker-compose.yml down",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "codegen": "turbo run codegen",
+    "test:e2e": "playwright test --config e2e/playwright.config.ts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "db:migrate": "pnpm --filter @ticketz/api db:migrate",
+    "db:seed": "pnpm --filter @ticketz/api db:seed",
+    "db:reset": "pnpm --filter @ticketz/api db:reset",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.3.0",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "turbo": "^2.5.0",
+    "typescript": "^5.9.2"
+  }
+}

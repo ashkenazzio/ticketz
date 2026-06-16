@@ -1,0 +1,46 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# builds
+dist/
+.next/
+out/
+build/
+*.tsbuildinfo
+
+# turbo
+.turbo/
+
+# test / coverage
+coverage/
+playwright-report/
+test-results/
+.playwright/
+
+# codegen output (regenerated from schema.gql)
+apps/web/src/generated/
+
+# env
+.env
+.env.*
+!.env.example
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# os / editor
+.DS_Store
+*.local
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# AI
+.claude/*
+CLAUDE.md
+
+# docs (kept local, not tracked)
+docs/

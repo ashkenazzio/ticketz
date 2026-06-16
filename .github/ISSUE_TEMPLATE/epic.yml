@@ -1,0 +1,20 @@
+name: Epic (tracking issue)
+description: A coordination-heavy epic that benefits from a child-ticket checklist
+title: 'Epic ?: '
+labels: ['type:epic']
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: One or two sentences — what 'done' looks like for this epic.
+    validations:
+      required: true
+  - type: textarea
+    id: tickets
+    attributes:
+      label: Tickets
+      description: Checklist of child issues.
+      value: |
+        - [ ] #
+        - [ ] #

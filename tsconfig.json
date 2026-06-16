@@ -1,0 +1,9 @@
+{
+  "//": "Editor baseline only. Real type-checking lives per-package via @ticketz/tsconfig presets and the `typecheck` task.",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "skipLibCheck": true
+  },
+  "files": []
+}

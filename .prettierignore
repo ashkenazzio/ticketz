@@ -1,0 +1,9 @@
+node_modules
+dist
+.next
+.turbo
+coverage
+pnpm-lock.yaml
+apps/web/src/generated
+apps/api/schema.gql
+docs/diagrams

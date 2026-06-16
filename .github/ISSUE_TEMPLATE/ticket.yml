@@ -1,0 +1,44 @@
+name: Ticket
+description: A bite-size unit of work from the backlog
+title: '[E?-T?] '
+body:
+  - type: input
+    id: scope
+    attributes:
+      label: Scope
+      description: 1–2 sentences — what this ticket does (and nothing more).
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [be, fe, fs, infra, docs]
+    validations:
+      required: true
+  - type: dropdown
+    id: size
+    attributes:
+      label: Size
+      options: ['S (<2h)', 'M (a few hours)', 'L (split before starting)']
+    validations:
+      required: true
+  - type: input
+    id: deps
+    attributes:
+      label: Dependencies
+      description: Ticket ids / issue refs that must be Done first (e.g. E1-T5, E2-T7).
+  - type: textarea
+    id: ac
+    attributes:
+      label: Acceptance criteria
+      value: |
+        - [ ]
+        - [ ] Unit tests for new logic written and green
+    validations:
+      required: true
+  - type: textarea
+    id: fe
+    attributes:
+      label: Frontend only — design reference + GraphQL op
+      description: Ticketz-UI page/component to match (build by hand); GraphQL op to wire.
