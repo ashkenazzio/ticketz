@@ -7,6 +7,11 @@ export default defineConfig({
     environment: 'node',
     include: ['src/**/*.spec.ts'],
     root: './',
+    // Satisfy env.ts's zod validation at import time. Unit tests never open a real
+    // connection (DB calls are mocked), so this is a placeholder, not a live DB.
+    env: {
+      DATABASE_URL: 'postgresql://test:test@localhost:5432/test?schema=public',
+    },
     coverage: {
       provider: 'v8',
       include: ['src/**/*.ts'],
