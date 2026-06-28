@@ -35,6 +35,9 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      # Generate the Prisma client (an empty stub after install) so the @prisma/client
+      # types resolve for typecheck/codegen/build. Engines download normally on Ubuntu.
+      - run: pnpm --filter @ticketz/api exec prisma generate
       - run: pnpm codegen
       - run: pnpm lint
       - run: pnpm typecheck

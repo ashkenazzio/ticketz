@@ -1,0 +1,10 @@
+// Prisma schema. Single source of truth for the DB shape + generated client.
+// E1-T1: datasource + generator only — no domain models yet (those land in E1-T2/T3).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
