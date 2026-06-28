@@ -2,12 +2,12 @@ packages:
   - 'apps/*'
   - 'packages/*'
 
-# pnpm 10 blocks postinstall build scripts by default; allow the ones we trust.
-onlyBuiltDependencies:
-  - esbuild
-  - '@swc/core'
-  - argon2
-  - prisma
-  - '@prisma/client'
-  - '@prisma/engines'
-  - sharp
+# pnpm blocks postinstall build scripts by default; allow the ones we trust.
+allowBuilds:
+  '@apollo/protobufjs': true
+  '@prisma/engines': true
+  '@swc/core': true
+  argon2: true
+  esbuild: true
+  prisma: true
+  sharp: true
