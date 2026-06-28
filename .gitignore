@@ -44,3 +44,8 @@ CLAUDE.md
 
 # docs (kept local, not tracked)
 docs/
+
+# Nix — flake.nix/.lock and .envrc are tracked (reproducible dev shell across
+# machines). Only the generated direnv cache and local overrides are ignored.
+.envrc.local
+.direnv/
